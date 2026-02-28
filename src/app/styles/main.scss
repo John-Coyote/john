@@ -1,0 +1,14 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import 'variables';
+
+
+body {
+  font-family: sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styles from './Header.module.scss';
-import { Input } from '@/shared/ui/Input';
-import { Button } from '@/shared/ui/Button';
 import clsx from 'clsx';
+import {Button} from "@shared/ui/Button";
+import {Input} from "@shared/ui/Input";
 
 interface HeaderProps {
   className?: string;
