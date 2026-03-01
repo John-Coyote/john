@@ -49,3 +49,14 @@
   align-items: center;
   gap: 12px;
 }
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.active {
+  font-weight: 600;
+  border-bottom: 2px solid #0052cc; // как в Jira
+}

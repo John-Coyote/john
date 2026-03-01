@@ -3,12 +3,13 @@ import styles from './Header.module.scss';
 import clsx from 'clsx';
 import {Button} from "@shared/ui/Button";
 import {Input} from "@shared/ui/Input";
+import {NavLink} from "react-router-dom";
 
 interface HeaderProps {
   className?: string;
-  onCreateClick: () => void;
-  searchValue: string;
-  onSearchChange: (value: string) => void;
+  onCreateClick?: () => void;
+  searchValue?: string;
+  onSearchChange?: (value: string) => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -23,10 +24,41 @@ export const Header: React.FC<HeaderProps> = ({
         <div className={styles.logo}>Jira Clone</div>
 
         <nav className={styles.nav}>
-          <span>Your work</span>
-          <span>Projects</span>
-          <span>Filters</span>
-          <span>Dashboards</span>
+          <NavLink
+            to="/your-work"
+            className={({ isActive }) =>
+              clsx(styles.link, isActive && styles.active)
+            }
+          >
+            Your work
+          </NavLink>
+
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              clsx(styles.link, isActive && styles.active)
+            }
+          >
+            Projects
+          </NavLink>
+
+          <NavLink
+            to="/filters"
+            className={({ isActive }) =>
+              clsx(styles.link, isActive && styles.active)
+            }
+          >
+            Filters
+          </NavLink>
+
+          <NavLink
+            to="/dashboards"
+            className={({ isActive }) =>
+              clsx(styles.link, isActive && styles.active)
+            }
+          >
+            Dashboards
+          </NavLink>
         </nav>
       </div>
 
